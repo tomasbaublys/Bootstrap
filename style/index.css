@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+.flex {
+  display: flex;
+} 
+.justify-center {
+  justify-content: center;
+} 
+.align-center {
+  align-items: center;
+}
+.direction-column {
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+#top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0)!important;
+}
+
+#top-navbar a {
+  color: white;
+}
+
+#carouselExampleCaptions {
+  min-height: 100vh;
+}
+
+#carouselExampleCaptions h5,
+#carouselExampleCaptions p {
+  color: white;
+  z-index: 2;
+}
+
+.carousel-caption {
+  z-index: 1;
+}
+
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item.active {
+  height: 100vh;
+}
+
+.first {
+  background-image: url(../img/img1.jpg);
+  background-size: cover;
+}
+.second {
+  background-image: url(../img/img2.jpg);
+  background-size: cover;
+}
+.third {
+  background-image: url(../img/img3.jpg);
+  background-size: cover;
+}
+
+/* Navbar */
+
+.logo-line {
+    border-left: 4px solid #18d26e;
+    height: 36px;
+}
+
+.navbar-brand {
+    padding: 0 10px;
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.nav-item>a { 
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-link {
+    padding: 10px 0 10px 30px!important;
+}
+
+/* Carusell */
+
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 10px;
+    color: white;
+    z-index: 1;
+}
+.btn-started {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    color: #fff;
+    background: #18d26e;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.carousel-item  {
+    padding: 0 80px;
+}
+
+.carousel-item h2, p {
+    width: 100%;
+    text-align: center;
+    max-width: 920px;
+}
