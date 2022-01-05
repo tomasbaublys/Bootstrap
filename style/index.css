@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-
-
 .flex {
   display: flex;
 } 
@@ -25,19 +23,62 @@ section {
   margin-bottom: 50px;
 }
 
+.logo-line a:before {
+  background-color: #18d26e;
+  content: "";
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  right: 10px;
+  width: 4px;
+  height:42px;
+}
+
 #top-navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 80px;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0)!important;
+  padding: 0 70px;
 }
 
 #top-navbar a {
   color: white;
 }
+
+.navbar-brand {
+    padding: 0 10px;
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: "Montserrat", sans-serif;
+    transition: .3s;
+}
+
+.nav-item>a { 
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-link {
+    padding: 10px 0 10px 30px!important;
+}
+
+.nav-link.active {
+  color: #18d26e!important;
+}
+
+.nav-link:hover {
+  color: #18d26e!important;
+  transition: 0.3s;
+}
+
+/* Carusell */
 
 #carouselExampleCaptions {
   min-height: 100vh;
@@ -80,34 +121,6 @@ section {
   background-size: cover;
 }
 
-/* Navbar */
-
-.logo-line {
-    border-left: 4px solid #18d26e;
-    height: 36px;
-}
-
-.navbar-brand {
-    padding: 0 10px;
-    font-size: 34px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.nav-item>a { 
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.nav-link {
-    padding: 10px 0 10px 30px!important;
-}
-
-/* Carusell */
-
 h2 {
     font-size: 48px;
     font-weight: bold;
@@ -132,12 +145,61 @@ h2 {
     z-index: 1;
 }
 
+.btn-started:hover {
+  color: #18d26e;
+  background: white;
+}
+
 .carousel-item  {
-    padding: 0 80px;
+    padding: 0 100px;
 }
 
 .carousel-item h2, p {
     width: 100%;
     text-align: center;
     max-width: 920px;
+}
+
+/* Media query */
+
+@media (max-width: 992px) {
+
+  #top-navbar {
+    padding: 0;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+  }
+
+  .logo-line a:before {
+    height:36px;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+  }
+  
+  .navbar-light .navbar-toggler {
+    color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+  }
+
+  .navbar-collapse .nav-link {
+    color: black!important;
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    min-height: 96vh;
+  }
+
+  .nav-link:active {
+    color: #18d26e!important;
+  }
+
 }
