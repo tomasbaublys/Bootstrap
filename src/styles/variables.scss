@@ -79,3 +79,24 @@ $main-font-size: 16px;
         font-size: pxToRem(16px);
     }
 } 
+
+%section-item {
+    padding: pxToRem(30px) pxToRem(20px);
+    i {
+        font-size: pxToRem(48px);
+        color: $main-green-color;
+    }
+    .service-title {    
+        a {
+            font-family: $title-font;
+            font-size: pxToRem(18px);
+            margin: pxToRem(15px) 0;
+        }
+    }
+    p   {
+        font-family: $regular-font;
+        color: $white-color;
+        font-size: pxToRem(14px);
+    }
+}
+
