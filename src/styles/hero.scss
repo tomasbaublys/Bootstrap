@@ -1,0 +1,52 @@
+@import 'variables.scss';
+
+.section-hero {
+    .carousel-inner {
+        height: 100vh;
+        .carousel-item {
+            &-1 {
+                background-image: url(../img/img1.jpg);
+                @extend %carousel-item;
+            }
+            &-2 {
+                background-image: url(../img/img2.jpg);
+                @extend %carousel-item;
+            }
+            &-3 {
+                background-image: url(../img/img3.jpg);
+                @extend %carousel-item;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+            } 
+
+            .carousel-item-text {
+                h2 {
+                    @extend %carousel-text;
+                    font-family: $title-font;
+                    font-size: pxToRem(48px);
+                    font-weight: 700;
+                }
+                p {
+                    @extend %carousel-text;
+                    font-family: $regular-font;
+                    font-size: pxToRem(16px);
+                    max-width: 60%;
+                }
+                a {
+                    @extend %button;
+                    font-family: $title-font;
+                    border-radius: pxToRem(32px);
+                    letter-spacing: pxToRem(1px);
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

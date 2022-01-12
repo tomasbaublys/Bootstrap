@@ -1,0 +1,25 @@
+@import 'variables.scss';
+
+.section-features {
+    .service-item {
+        padding: pxToRem(30px) pxToRem(20px);
+        i {
+            font-size: pxToRem(48px);
+            color: $main-green-color;
+        }
+        h4 {
+            font-family: $title-font;
+            font-size: pxToRem(18px);
+            margin: pxToRem(15px) 0;
+        }
+        p   {
+            font-family: $regular-font;
+            color: $white-color;
+            font-size: pxToRem(14px);
+        }
+
+    &.midle {
+        background-image: linear-gradient(0deg, #000000 0%, #242323 50%, #000000 100%);
+        }
+    }
+}

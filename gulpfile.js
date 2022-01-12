@@ -34,6 +34,16 @@ function scss() {
     .pipe(dest('dist'))
 }
 
+function img() {
+  return src('src/img/**.jpg')
+    .pipe(dest('dist/img'))
+}
+
+function reset() {
+  return src('src/styles/reset.css')
+    .pipe(dest('dist'))
+}
+
 async function clear() {
   del('dist');
 }
@@ -43,8 +53,8 @@ function serve() {
     server: './dist'
   })
 
-  watch('src/**.html', series(html)).on('change', sync.reload)
-  watch('src/**.scss', series(scss)).on('change', sync.reload)
+  watch('src/**/**.html', series(html)).on('change', sync.reload)
+  watch('src/styles/**.scss', series(scss)).on('change', sync.reload)
 }
 
-exports.start = series(clear, html, scss, serve);
+exports.start = series(html, reset, img, scss, serve);

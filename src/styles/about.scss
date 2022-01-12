@@ -1,0 +1,46 @@
+@import 'variables.scss';
+
+.section-about {
+    .section-header {
+        @extend %section-header;
+    }
+    .card {
+        .img {
+            position: relative;
+            .icon {
+                position: absolute;
+                width: pxToRem(64px);
+                height: pxToRem(64px);
+                background-color: $main-green-color;
+                border-radius: 50%;
+                border: 4px solid $white-color;
+                display: flex;
+                align-items: center;
+                position: absolute;
+                justify-content: center; 
+                left: calc(50% - 32px);
+                bottom: -30px;
+                i {
+                    color: $white-color;
+                    font-size: pxToRem(28px);
+                    transition: 3s;
+                }
+            }
+        }
+        .card-body {
+            padding-top: pxToRem(40px);
+
+            .card-title {
+                font-family: $title-font;
+                font-size: pxToRem(20px);
+                font-weight: 700;
+                text-align: center;
+            }
+            .card-text {
+                font-family: $regular-font;
+                font-size: pxToRem(14px);
+                line-height: pxToRem(24px);
+            }
+        }
+    }
+}

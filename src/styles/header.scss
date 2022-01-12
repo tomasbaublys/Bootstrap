@@ -1,0 +1,44 @@
+@import 'variables.scss';
+
+/*  Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: pxToRem(80px);
+    z-index: 2;
+
+    .navbar {
+        height: 5rem;
+
+        .nav-logo {
+            font-size: pxToRem(34px);
+            font-family: $title-font;
+            font-weight: 700;
+            border-left: pxToRem(4px) solid $main-green-color;
+            letter-spacing: pxToRem(3px);
+            padding-left: pxToRem(10px);
+            height: pxToRem(40px);
+            display: flex;
+            align-items: center;
+        }
+        .nav-item {
+            .nav-link {
+                @extend %nav-links;
+                font-family: $title-font;
+                color: $white-color;
+                padding: pxToRem(10px) 0 pxToRem(10px) pxToRem(30px);
+                cursor: pointer;
+
+                &.active {
+                    color: #18d26e!important;
+                }
+                &:hover {
+                    color: $main-green-color;
+                }
+            }
+        }
+    }
+}
